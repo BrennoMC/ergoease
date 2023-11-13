@@ -1,0 +1,28 @@
+@use "../../styles/variables.scss";
+
+.container-button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 2rem;
+
+  &__custom-button {
+    background-color: variables.$background-blue;
+    width: 13rem;
+    height: 2.8rem;
+    border-radius: 0.3rem;
+
+    color: variables.$primary-text;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1em;
+    font-family: 'Poppins';
+  
+    &:hover {
+      cursor: pointer;
+      background-color: #0f458a;
+      transition: all 0.2s linear;
+    }
+  }
+}

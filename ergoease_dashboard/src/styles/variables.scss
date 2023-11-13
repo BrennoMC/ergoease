@@ -1,0 +1,32 @@
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins-ExtraLight.ttf');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins-Light.ttf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins-Regular.ttf');
+    font-weight: 400;
+}
+
+$primary-color: #151B28;
+$secondary-background: #2C3444;
+$background-blue: #085FCE;
+$input-color: #4A4A4A;
+$primary-text: #FFFFFF;
+$secondary-text: #A5ACBA;
+$background-header: #111E33;
