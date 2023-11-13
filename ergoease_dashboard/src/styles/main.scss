@@ -1,7 +1,16 @@
-@use 'variables';
+@use './variables';
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Poppins';
+
+    button, input[type="submit"], input[type="reset"] {
+        all: unset;
+    }
+
+    button:focus {
+        outline: revert;
+    }
 }

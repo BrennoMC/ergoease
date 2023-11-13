@@ -1,0 +1,85 @@
+@use "../../styles/variables.scss";
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__content-left {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 75%;
+        height: 100%;
+        background-color: variables.$primary-color;
+
+        &__logo-part-one {
+            display: flex;
+            height: 60%;
+
+            @media screen and (max-width: 1080px) {
+                height: 50%;
+            };
+
+            @media screen and (max-width: 950px) {
+                height: 40%;
+            };
+
+            @media screen and (max-width: 775px) {
+                height: 35%;
+            };
+        };
+
+        &__content-info {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            width: 80%;
+
+            p {
+                
+                color: variables.$secondary-text;
+                text-align: left;
+                font-size: 1.2em;
+                font-weight: normal;
+            }
+
+            &__logo {
+                display: flex;
+                align-self: flex-start;
+                width: 70%;
+                height: 70%;
+            }
+        }
+    }
+
+    &__content-right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 25%;
+        background-color: variables.$secondary-background;
+        height: 100%;
+
+        &__logo-part-two {
+            display: flex;
+            height: 60%;
+
+            @media screen and (max-width: 1080px) {
+                height: 50%;
+            };
+
+            @media screen and (max-width: 950px) {
+                height: 40%;
+            };
+
+            @media screen and (max-width: 775px) {
+                height: 35%;
+            };
+        }
+    }
+}
