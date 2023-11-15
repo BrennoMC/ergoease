@@ -20,16 +20,20 @@
             display: flex;
             height: 60%;
 
-            @media screen and (max-width: 1080px) {
+            @media screen and (max-width: 1366px) {
                 height: 50%;
             };
 
-            @media screen and (max-width: 950px) {
+            @media screen and (max-width: 1080px) {
                 height: 40%;
             };
 
-            @media screen and (max-width: 775px) {
-                height: 35%;
+            @media screen and (max-width: 950px) {
+                height: 30%;
+            };
+
+            @media screen and (max-width: 768px) {
+                height: 25%;
             };
         };
 
@@ -69,16 +73,20 @@
             display: flex;
             height: 60%;
 
-            @media screen and (max-width: 1080px) {
+            @media screen and (max-width: 1366px) {
                 height: 50%;
             };
 
-            @media screen and (max-width: 950px) {
+            @media screen and (max-width: 1080px) {
                 height: 40%;
             };
 
-            @media screen and (max-width: 775px) {
-                height: 35%;
+            @media screen and (max-width: 950px) {
+                height: 30%;
+            };
+
+            @media screen and (max-width: 768px) {
+                height: 25%;
             };
         }
     }
