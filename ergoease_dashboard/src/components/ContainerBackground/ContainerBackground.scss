@@ -1,0 +1,111 @@
+@use '../../styles/variables.scss';
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to right, variables.$primary-color 0, variables.$primary-color 70%, variables.$secondary-background 30%);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        height: 60%;
+        margin: 1rem;
+
+        &__content-info {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            width: 80%;
+
+            p {
+                
+                color: variables.$secondary-text;
+                text-align: left;
+                font-size: 1.2em;
+                font-weight: normal;
+            }
+
+            &__logo {
+                display: flex;
+                align-self: flex-start;
+                width: 70%;
+                height: 70%;
+            }
+
+            &__redirect {
+                margin-top: 1.5rem;
+                font-size: 0.9em;
+                font-weight: 500;
+
+                a {
+                    text-decoration: none;
+                }
+
+                &__text-one {
+                    color: variables.$primary-text;
+                }
+
+                &__text-two {
+                    color: variables.$background-blue;
+                }
+            }
+        }
+    }
+
+    &__image-logo {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        margin-right: 3.6rem;
+        width: 30%;
+        
+
+        img {
+            width: 90%;
+            height: 90%;
+        }
+    }
+
+    
+    @media screen and (max-width: 1920px) {
+        &__image-logo {
+            margin-right: 7.5rem;
+        }
+    };
+
+    @media screen and (max-width: 1366px) {
+    
+        &__image-logo {
+            margin-right: 5.5rem;
+        }
+    };
+
+    @media screen and (max-width: 1080px) {
+
+        &__image-logo {
+            margin-right: 4.5rem;
+        }
+    };
+
+    @media screen and (max-width: 950px) {
+
+        &__image-logo {
+            margin-right: 4rem;
+        }
+
+    };
+
+    @media screen and (max-width: 768px) {
+
+        &__image-logo {
+            margin-right: 3.5rem
+        }
+
+    };
+}
