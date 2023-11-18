@@ -1,11 +1,32 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 
 import './styles/main.scss';
+import LandingPage from './pages/LandingPage/LandingPage.jsx';
+import QuotePage from './pages/QuotePage/QuotePage.jsx';
+import LoginPage from './pages/LoginPage/LoginPage.jsx';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <LandingPage />,
+  },
+  {
+    path: "/quote",
+    element: <QuotePage />,
+  },
+  {
+    path: "/login",
+    element: <LoginPage />,
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )
