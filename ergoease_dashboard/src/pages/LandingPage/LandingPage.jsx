@@ -13,6 +13,7 @@ const LandingPage = () => {
     return (
         <>
             <ContainerBackground 
+                isLanding
                 image={Logo}
                 titleBtn="Solicitar Orçamento"
                 paragraph={description}

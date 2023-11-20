@@ -1,51 +1,54 @@
 /* eslint-disable react/prop-types */
 import './ContainerBackground.scss';
 import LogoImage from '../../assets/img/svg/logoImage.svg';
-import ButtonAdvanced from '../ButtonAdvanced/ButtonAdvanced';
-import { Link } from 'react-router-dom';
+import ContentLanding from '../ContentLanding/ContentLanding';
+import ContentLogin from '../ContentLogin/ContentLogin';
+import ContentForgotPassword from '../ContentForgotPassword/ContentForgotPassword';
 
 const ContainerBackground = ({ 
+    isLanding,
+    isLogin,
+    isForgotPasswordPage,
     image, 
     titleBtn, 
     paragraph,
     titleRegistration,
     linkRedirectText,
     linkRedirectButton,
+    title,
+    forgotPasswordText,
+    linkForgotPassword,
 }) => {
-    const textLink = titleRegistration.slice(20);
-    const textRegistration = titleRegistration.slice(0, 20);
+
 
     return (
         <div className="container">
             <div className="container__content">
-                <div className="container__content__content-info">
-                    <img 
-                        src={image} 
-                        alt="Logo da empresa" 
-                        className="container__content__content-info__logo"
+                {isLanding && (
+                    <ContentLanding 
+                        image={image}
+                        paragraph={paragraph}
+                        titleButton={titleBtn}
+                        linkRedirectText={linkRedirectText}
+                        linkRedirectButton={linkRedirectButton}
+                        titleRegistration={titleRegistration}
                     />
-                    {paragraph && paragraph.length > 0 && paragraph.map((item, index) => (
-                        <p key={index}>
-                            <br />{item}
-                        </p>
-                    ))}
+                )}
 
-                    {titleBtn && (
-                        <ButtonAdvanced 
-                            title={titleBtn}
-                            linkRedirectButton={linkRedirectButton} 
-                        />
-                    )}
+                {isLogin && (
+                    <ContentLogin 
+                        title={title}
+                        forgotPasswordText={forgotPasswordText}
+                        linkForgotPassword={linkForgotPassword}
+                    />
+                )}
 
-                    {linkRedirectText && (
-                        <div className="container__content__content-info__redirect">
-                            <Link to={linkRedirectText}>
-                                <span className="container__content__content-info__redirect__text-one">{textRegistration}</span>
-                                <span className="container__content__content-info__redirect__text-two">{textLink}</span>
-                            </Link>
-                        </div>
-                    )}
-                </div>
+                {isForgotPasswordPage && (
+                    <ContentForgotPassword
+                        title={title}
+                    />
+                )}
+
             </div>
             <div className="container__image-logo">
                 <img src={LogoImage} alt="Imagem logo principal" />

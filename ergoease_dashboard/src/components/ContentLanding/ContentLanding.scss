@@ -1,0 +1,41 @@
+@use '../../styles/variables.scss';
+
+.content-landing {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 80%;
+
+    p {
+        color: variables.$secondary-text;
+        text-align: left;
+        font-size: 1.2em;
+        font-weight: normal;
+    }
+
+    &__logo {
+        display: flex;
+        align-self: flex-start;
+        width: 70%;
+        height: 70%;
+    }
+
+    &__redirect {
+        margin-top: 1.5rem;
+        font-size: 0.9em;
+        font-weight: 500;
+
+        a {
+            text-decoration: none;
+        }
+
+        &__text-one {
+            color: variables.$primary-text;
+        }
+
+        &__text-two {
+            color: variables.$background-blue;
+        }
+    }
+}

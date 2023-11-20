@@ -1,9 +1,16 @@
-const QuotePage = () => {
+import ContainerBackground from '../../components/ContainerBackground/ContainerBackground';
+
+const LoginPage = () => {
     return (
         <>
-            <h1>Welcome to Login Page</h1>
+            <ContainerBackground 
+                title="Login"
+                isLogin
+                forgotPasswordText="Esqueci a senha"
+                linkForgotPassword="/forgot-password"
+            />
         </>
     );
 }
 
-export default QuotePage;
+export default LoginPage;
