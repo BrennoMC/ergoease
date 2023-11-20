@@ -10,7 +10,7 @@
   &__custom-button {
     background-color: variables.$background-blue;
     width: 13rem;
-    height: 2.8rem;
+    height: 2.5rem;
     border-radius: 0.3rem;
 
     color: variables.$primary-text;
@@ -29,4 +29,12 @@
       transition: all 0.2s linear;
     }
   }
+}
+
+.send-forgot-password {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: 2rem;
+  width: 53%;
 }
