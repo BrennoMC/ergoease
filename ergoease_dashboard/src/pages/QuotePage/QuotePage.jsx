@@ -13,16 +13,23 @@ const QuotePage = () => {
 
     useEffect( () => {
         try {
-            axios.post("http://localhost:3333/orcamento", buttonClickData, {
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            }).then((response) => {
-                console.log('resp = ', response);
-            }).catch(function (error) {
+            axios.post('http://localhost:3333/orcamento', buttonClickData)
+                .then(function (res) {
+
+                console.log(res)
+
+                if(res.status = 200) {
+                    console.log("Recebemos seu email! Aguarde que entraremos em contato o mais breve possível")
+                    alert("Recebemos seu email! Aguarde que entraremos em contato o mais breve possível")
+                }
+                //return response.data
+                //return JSON.stringify(response.data)
+
+                })
+                .catch(function (error) {
                 console.error(error)
                 return error
-            });
+                });
         } catch(error) {
             console.log('error = ', error)
         }
