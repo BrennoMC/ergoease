@@ -16,7 +16,7 @@ const LandingPage = () => {
                 isLanding
                 image={Logo}
                 titleBtn="Solicitar Orçamento"
-                paragraph={description}
+                description={description}
                 titleRegistration="Já possuí cadastro? Faça Login"
                 linkRedirectText="/login"
                 linkRedirectButton="/quote"
