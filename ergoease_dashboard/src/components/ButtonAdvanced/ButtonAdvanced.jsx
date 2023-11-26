@@ -6,15 +6,25 @@ import { Link } from 'react-router-dom';
 const ButtonAdvanced = ({ 
     title, 
     linkRedirectButton,
-    classNameProps 
+    classNameProps, 
+    isDisabled,
+    handleClick,
+    type,
 }) => {
 
     return (
         <div className={classNameProps ?? `container-button`}>
             <button 
                 className={`container-button__custom-button`}
+                disabled={isDisabled}
+                onClick={handleClick}
+                type={type}
             >
-                <Link to={linkRedirectButton}>{title}</Link>
+                {linkRedirectButton ? (
+                    <Link to={linkRedirectButton}>{title}</Link>
+                ): (
+                    title
+                )}
             </button>
         </div>
     );

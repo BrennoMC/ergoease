@@ -1,0 +1,115 @@
+@use '../../styles/variables.scss';
+
+.content-quote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+
+    
+    &__header-quote {
+        color: variables.$primary-text;
+
+        p {
+            margin-top: 1rem;
+            font-weight: 300;
+        }
+    }
+
+    &__form-inputs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+        label {
+            margin-top: 2rem;
+            color: variables.$primary-text;
+            font-size: 0.8em;
+        }
+        
+        &__name-input {}
+
+        &__phone-input {}
+
+        &__size-company {}
+
+        &__email-input {}
+
+        &__form-header {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: baseline;
+            width: 100%;
+
+            p {
+                margin-top: 2rem;
+                color: variables.$secondary-text;
+                font-weight: 200;
+                font-size: 0.7em;
+            }
+    
+            span {
+                color: variables.$background-blue;
+                font-weight: 500;
+            }
+        }
+    }
+
+    form {
+        display: grid;
+        width: 100%;
+        align-items: center;
+        justify-items: stretch;
+        grid-auto-flow: column;
+        margin-top: 2.5rem;
+        grid-template-rows: 70% 30%;
+
+        input, select {
+            all: unset;
+            background-color: variables.$secondary-background;
+            color: variables.$primary-text;
+            height: 2.4rem;
+            width: 90%;
+            border-radius: 0.3rem;
+            padding: 0 0.5rem;
+            display: flex;
+            align-items: center;
+            font-size: 0.8em;
+        }
+
+        option {
+            background-color: variables.$secondary-background;
+            color: variables.$primary-text;
+        }
+
+        select {
+            appearance: revert;
+            cursor: pointer;
+            outline: revert;
+        }
+
+
+
+        input:focus, option:focus {
+            outline: revert;
+            background-color: transparent;
+        }
+    }
+
+    &__accept-terms {
+        color: variables.$primary-text;
+        font-weight: 200;
+        font-size: 0.8em;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 3rem;
+        
+        input {
+            margin-right: 1rem;
+            cursor: pointer;
+        }
+    }
+    
+}

@@ -4,20 +4,23 @@ import LogoImage from '../../assets/img/svg/logoImage.svg';
 import ContentLanding from '../ContentLanding/ContentLanding';
 import ContentLogin from '../ContentLogin/ContentLogin';
 import ContentForgotPassword from '../ContentForgotPassword/ContentForgotPassword';
+import ContentQuote from '../ContentQuote/ContentQuote';
 
 const ContainerBackground = ({ 
     isLanding,
     isLogin,
     isForgotPasswordPage,
+    isQuote,
     image, 
     titleBtn, 
-    paragraph,
+    description,
     titleRegistration,
     linkRedirectText,
     linkRedirectButton,
     title,
     forgotPasswordText,
     linkForgotPassword,
+    handleClick
 }) => {
 
 
@@ -27,7 +30,7 @@ const ContainerBackground = ({
                 {isLanding && (
                     <ContentLanding 
                         image={image}
-                        paragraph={paragraph}
+                        paragraph={description}
                         titleButton={titleBtn}
                         linkRedirectText={linkRedirectText}
                         linkRedirectButton={linkRedirectButton}
@@ -46,6 +49,14 @@ const ContainerBackground = ({
                 {isForgotPasswordPage && (
                     <ContentForgotPassword
                         title={title}
+                    />
+                )}
+
+                {isQuote && (
+                    <ContentQuote 
+                        title={title}
+                        description={description}
+                        handleClick={handleClick}
                     />
                 )}
 
