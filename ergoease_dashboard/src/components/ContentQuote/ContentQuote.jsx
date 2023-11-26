@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import './ContentQuote.scss';
 import ButtonAdvanced from '../ButtonAdvanced/ButtonAdvanced';
-import 'react-toastify/dist/ReactToastify.min.css'; 
+
 
 const ContentQuote = ({
     title,
