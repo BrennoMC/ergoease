@@ -5,12 +5,14 @@ import ContentLanding from '../ContentLanding/ContentLanding';
 import ContentLogin from '../ContentLogin/ContentLogin';
 import ContentForgotPassword from '../ContentForgotPassword/ContentForgotPassword';
 import ContentQuote from '../ContentQuote/ContentQuote';
+import ContentRegister from '../ContentRegister/ContentRegister';
 
 const ContainerBackground = ({ 
     isLanding,
     isLogin,
     isForgotPasswordPage,
     isQuote,
+    isRegister,
     image, 
     titleBtn, 
     description,
@@ -56,6 +58,13 @@ const ContainerBackground = ({
                     <ContentQuote 
                         title={title}
                         description={description}
+                        handleClick={handleClick}
+                    />
+                )}
+
+                {isRegister && (
+                    <ContentRegister 
+                        title={title}
                         handleClick={handleClick}
                     />
                 )}

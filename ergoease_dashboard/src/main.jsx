@@ -10,6 +10,7 @@ import LandingPage from './pages/LandingPage/LandingPage.jsx';
 import QuotePage from './pages/QuotePage/QuotePage.jsx';
 import LoginPage from './pages/LoginPage/LoginPage.jsx';
 import ForgotPasswordPage from './pages/ForgotPasswordPage/ForgotPasswordPage.jsx';
+import RegisterPage from './pages/RegisterPage/RegisterPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/forgot-password",
     element: <ForgotPasswordPage />,
+  },
+  {
+    path: "/register",
+    element: <RegisterPage />,
   },
 ]);
 
