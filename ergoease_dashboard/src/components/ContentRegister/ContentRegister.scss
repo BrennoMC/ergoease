@@ -1,0 +1,78 @@
+@use '../../styles/variables.scss';
+
+.content-register {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        text-align: center;
+        margin-top: 1rem;
+        font-weight: 500;
+        color: variables.$primary-text;
+    }
+
+    form {
+        display: grid;
+        margin-top: 2.5rem;
+        grid-template-rows: 65% 35%;
+
+        input {
+            all: unset;
+            background-color: variables.$secondary-background;
+            color: variables.$primary-text;
+            height: 2.4rem;
+            width: 90%;
+            border-radius: 0.3rem;
+            padding: 0 0.5rem;
+            display: flex;
+            align-items: center;
+            font-size: 0.8em;
+        }
+
+        label {
+            margin-top: 2.5rem;
+            color: variables.$primary-text;
+            font-size: 0.8em;
+        }
+
+
+        input:focus {
+            outline: revert;
+            background-color: transparent;
+        }
+    }
+
+    &__form-inputs {
+        display: grid;
+        grid-template-rows: 2fr 2fr 1fr 1fr;
+
+
+        &__first-infos {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            width: 100%;
+        }
+
+        &__second-infos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        &__third-infos {
+            display: grid;
+            grid-template-columns: 70% auto;
+        }
+
+        &__fourth-infos {
+            display: grid;
+            grid-template-columns: 33% auto auto;
+            gap: 1rem;
+        }
+    }
+
+
+    
+
+}

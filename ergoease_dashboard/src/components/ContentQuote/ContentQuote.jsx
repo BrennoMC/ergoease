@@ -18,13 +18,11 @@ const ContentQuote = ({
         { value: 'Acima de 200 funcionários', label: 'Acima de 200 funcionários', }
     ];
 
-
     const handleRegistration = (data) => {
-        console.log(data);
         handleClick(data);
     };
 
-    const handleError = (errors) => {};
+    const handleError = () => {};
 
     const registerOptions = {
         name: { required: "Nome é obrigatório" },

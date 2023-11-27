@@ -3,6 +3,7 @@ import ContainerBackground from '../../components/ContainerBackground/ContainerB
 import useButtonClick from '../../hooks/useButtonClick';
 import api from '../../service/api';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const QuotePage = () => {
     const { buttonClickData, handleButtonClick } = useButtonClick();
@@ -12,6 +13,7 @@ const QuotePage = () => {
     }
 
     useEffect( () => {
+        //TODO: criar link de redirecionamento para a home
         try {
             axios.post('http://localhost:3333/orcamento', buttonClickData)
                 .then(function (res) {
@@ -45,6 +47,8 @@ const QuotePage = () => {
                 isQuote
                 handleClick={handleButtonClick}
             />
+            {/*Apagar Link depois que finalizar a integração*/}
+            <Link to="/register">REGISTER</Link>
         </>
     );
 }
