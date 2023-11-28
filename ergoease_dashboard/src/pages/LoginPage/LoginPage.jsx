@@ -31,8 +31,8 @@ const LoginPage = () => {
             <ContainerBackground 
                 title="Login"
                 isLogin
-                //forgotPasswordText="Esqueci a senha"
-                //linkForgotPassword="/forgot-password"
+                forgotPasswordText="Esqueci a senha"
+                linkForgotPassword="/forgot-password"
                 handleClick={handleButtonClick}
             />
         </>
