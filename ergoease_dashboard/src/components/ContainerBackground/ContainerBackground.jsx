@@ -45,6 +45,7 @@ const ContainerBackground = ({
                         title={title}
                         forgotPasswordText={forgotPasswordText}
                         linkForgotPassword={linkForgotPassword}
+                        handleClick={handleClick}
                     />
                 )}
 
