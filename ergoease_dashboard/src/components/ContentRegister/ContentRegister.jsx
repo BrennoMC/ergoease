@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import ButtonAdvanced from "../ButtonAdvanced/ButtonAdvanced";
 import './ContentRegister.scss';
 
+
 const ContentRegister = ({
     title,
     handleClick,
@@ -21,18 +22,15 @@ const ContentRegister = ({
             neighborhood: { required: "Bairro é obrigatório" },
             city: { required: "Cidade é obrigatório" },
             state: { required: "Estado é obrigatório" },
+            cep: { required: "CEP é obrigatório" },
         }
     };
 
-    const { register, formState: { errors } } = useForm({
+    const { register, handleSubmit, formState: { errors } } = useForm({
         mode: 'onBlur'
     });
 
-    const handleSubmit = () => {
-    }
-
     const handleRegistration = (data) => {
-        data.preventDefault(); //ajustar
         handleClick(data);
     };
 
@@ -83,7 +81,10 @@ const ContentRegister = ({
                                 type="password"
                             />
                             {errors?.password && (<p style={{ color: 'red', fontSize: '12px', marginTop: '5px'}}>{errors.password.message}</p>)}
-                        </div>    
+                        </div>     
+                    </div>
+
+                    <div className="content-register__form-inputs__third-infos">  
                         <div className="content-register__form-inputs__second-infos__phone-input">
                             <label>Telefone</label>
                             <input 
@@ -93,9 +94,18 @@ const ContentRegister = ({
                             />
                             {errors?.phoneNumber && (<p style={{ color: 'red', fontSize: '12px', marginTop: '5px'}}>{errors.phoneNumber.message}</p>)}
                         </div>   
+                        <div className="content-register__form-inputs__second-infos__cep-input">
+                            <label>CEP</label>
+                            <input 
+                                name="cep"
+                                {...register("cep", registerOptions.address.cep)}
+                                type="text"
+                            />
+                            {errors?.cep && (<p style={{ color: 'red', fontSize: '12px', marginTop: '5px'}}>{errors.cep.message}</p>)}
+                        </div>    
                     </div>
 
-                    <div className="content-register__form-inputs__third-infos">
+                    <div className="content-register__form-inputs__fourth-infos">
                         <div className="content-register__form-inputs__third-infos__street-input">
                             <label>Rua</label>
                             <input 
@@ -116,7 +126,7 @@ const ContentRegister = ({
                         </div>   
                     </div>
 
-                    <div className="content-register__form-inputs__fourth-infos">
+                    <div className="content-register__form-inputs__fifth-info">
 
                         <div className="content-register__form-inputs__fourth-infos__neighborhood-input">
                             <label>Bairro</label>

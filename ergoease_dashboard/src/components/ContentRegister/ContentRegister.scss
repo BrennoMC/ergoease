@@ -51,25 +51,31 @@
         &__first-infos {
             display: grid;
             grid-template-columns: 2fr 1fr;
-            width: 100%;
         }
 
         &__second-infos {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
+            grid-template-columns: 2fr 1fr;
         }
 
         &__third-infos {
             display: grid;
-            grid-template-columns: 70% auto;
+            grid-template-columns: 2fr 1fr;
         }
 
         &__fourth-infos {
             display: grid;
-            grid-template-columns: 33% auto auto;
-            gap: 1rem;
+            grid-template-columns: 2fr 1fr;
         }
+
+        &__fifth-info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            
+        }
+        
+        
     }
 
 
