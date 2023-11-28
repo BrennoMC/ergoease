@@ -52,6 +52,7 @@ const ContainerBackground = ({
                 {isForgotPasswordPage && (
                     <ContentForgotPassword
                         title={title}
+                        handleClick={handleClick}
                     />
                 )}
 
